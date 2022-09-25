@@ -15,6 +15,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<Estudiante> votantes = new ArrayList<>();
     int n = 0;
+    int posicion = 0;
+    int voto = 0;
+
    private ArrayList<Estudiante> GetData(){
        votantes.add(new Estudiante("8-944-327",0));
        votantes.add(new Estudiante("3-740-1394",0));
@@ -61,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent2 = getIntent();
+        n = intent2.getIntExtra("n",0);
+        posicion = intent2.getIntExtra("posicion",0);
+        voto = intent2.getIntExtra("voto",0);
+        int a= voto;
+
         if (n == 0)
             GetData();
 
@@ -79,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
            if(cedula.equals(votantes.get(i).cedula)){
                if(votantes.get(i).voto == 0 ){
                    intent.putExtra("posicion", i);
+                   intent.putExtra("lista", votantes);
                    startActivity(intent);
                    match = true;
                    break;
@@ -88,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                    alertDialogBuilder.setTitle("Denegado");
                    alertDialogBuilder
                            .setMessage("Usted ya ha votado")
+                           .setCancelable(false)
                            .setPositiveButton("Aceptar",new DialogInterface.OnClickListener()
                            {
                                public void onClick(DialogInterface dialog,int id) {
@@ -104,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             alertnotfound.setTitle("Denegado");
             alertnotfound
                     .setMessage("Esta cédula no está registrada")
+                    .setCancelable(false)
                     .setPositiveButton("Aceptar",new DialogInterface.OnClickListener()
                     {
                         public void onClick(DialogInterface dialog,int id) {
