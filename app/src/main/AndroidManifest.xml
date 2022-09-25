@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Proyecto1"
         tools:targetApi="31">
         <activity
+            android:name=".Resultados"
+            android:exported="false" />
+        <activity
             android:name=".Candidatos"
             android:exported="false" />
         <activity
