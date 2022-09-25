@@ -20,9 +20,12 @@ public class Candidatos extends AppCompatActivity {
     }
 
     public void Votar (View view){
+        ArrayList<Estudiante> votante2 = new ArrayList<Estudiante>();
         Intent intent = getIntent();
+        votante2 = (ArrayList<Estudiante>) getIntent().getSerializableExtra("lista");
+
         int posicion = intent.getIntExtra("posicion",0);
-        //ArrayList<Estudiante> lst = intent.
+
         int voto = 0;
         int n = 1;
 
@@ -41,9 +44,12 @@ public class Candidatos extends AppCompatActivity {
                 voto = 2;
             }
             else voto = 3;
-            intent2.putExtra("posicion",posicion);
-            intent2.putExtra("voto", voto);
+
+            votante2.get(posicion).voto = voto;
+
+            intent2.putExtra("listaAct", votante2);
             intent2.putExtra("n", n);
+
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle("Felicidades");
             alertDialogBuilder

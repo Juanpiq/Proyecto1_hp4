@@ -1,6 +1,8 @@
 package com.example.proyecto1;
 
-public class Estudiante {
+import java.io.Serializable;
+
+public class Estudiante implements Serializable {
     public String cedula;
 
     public String getCedula() {

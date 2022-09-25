@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<Estudiante> votantes = new ArrayList<>();
+    ArrayList<Estudiante> votantes = new ArrayList<Estudiante>();
     int n = 0;
     int posicion = 0;
     int voto = 0;
@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent2 = getIntent();
         n = intent2.getIntExtra("n",0);
-        posicion = intent2.getIntExtra("posicion",0);
-        voto = intent2.getIntExtra("voto",0);
+
         int a= voto;
 
         if (n == 0)
             GetData();
+        else votantes = (ArrayList<Estudiante>) getIntent().getSerializableExtra("listaAct");
 
     }
 
@@ -83,12 +83,13 @@ public class MainActivity extends AppCompatActivity {
        EditText edtCed = findViewById(R.id.edtCed);
        cedula = edtCed.getText().toString();
 
-        Intent intent = new Intent(getApplicationContext(),Candidatos.class);
+        Intent intent = new Intent(MainActivity.this,Candidatos.class);
 
        for(int i = 0; i < votantes.size(); i++){
            if(cedula.equals(votantes.get(i).cedula)){
                if(votantes.get(i).voto == 0 ){
                    intent.putExtra("posicion", i);
+
                    intent.putExtra("lista", votantes);
                    startActivity(intent);
                    match = true;
@@ -124,5 +125,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).create().show();
         }
+    }
+
+
+    public void prueba (View view){
+       TextView txtp = findViewById(R.id.txtp);
+       //votantes.get(0).voto = 2;
+       String v = String.valueOf(votantes.get(0).voto);
+       txtp.setText(votantes.get(21).cedula+ " " + String.valueOf(votantes.get(21).voto) + "\n" + votantes.get(35).cedula+ " " + String.valueOf(votantes.get(35).voto));
     }
 }
