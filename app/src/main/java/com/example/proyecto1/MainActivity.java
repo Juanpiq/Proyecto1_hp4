@@ -128,10 +128,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void prueba (View view){
-       TextView txtp = findViewById(R.id.txtp);
-       //votantes.get(0).voto = 2;
-       String v = String.valueOf(votantes.get(0).voto);
-       txtp.setText(votantes.get(21).cedula+ " " + String.valueOf(votantes.get(21).voto) + "\n" + votantes.get(35).cedula+ " " + String.valueOf(votantes.get(35).voto));
-    }
+    public void resultados (View view){
+        int[] votos = {0,0,0,0};
+        Intent intent3 = new Intent(MainActivity.this,Resultados.class);
+        for(int i = 0; i < votantes.size(); i++){
+            if (votantes.get(i).voto != 0){
+                if (votantes.get(i).voto == 1){
+                    votos[1]++;
+                }
+                else if (votantes.get(i).voto == 2){
+                    votos[2]++;
+                }
+                else if (votantes.get(i).voto == 3){
+                    votos[3]++;
+                }
+                votos[0]++;
+            }
+        }
+        intent3.putExtra("resultados",votos);
+        startActivity(intent3);
+        }
 }
