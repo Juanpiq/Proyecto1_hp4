@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/utp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".75"
+        app:srcCompat="@drawable/utp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/btnVot"
@@ -13,17 +23,18 @@
         android:layout_marginTop="50dp"
         android:onClick="ingresar"
         android:text="Ingresar"
+        app:layout_constraintBottom_toTopOf="@+id/btnRes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCed"
-        app:layout_constraintBottom_toTopOf="@+id/btnRes"/>
+        app:layout_constraintTop_toBottomOf="@+id/edtCed" />
 
     <TextView
         android:id="@+id/txtIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:text="Ingrese la Cédula"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,14 +42,20 @@
 
     <EditText
         android:id="@+id/edtCed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/custom_baseline_account_icon"
+        android:drawablePadding="12dp"
         android:ems="10"
         android:hint="ej. 8-937-1640"
         android:inputType="textPersonName"
-        android:textSize="24sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIngresar" />
 
@@ -46,10 +63,13 @@
         android:id="@+id/btnRes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Ver Resultados"
+        android:layout_marginTop="28dp"
         android:onClick="resultados"
+        android:text="Ver Resultados"
         app:layout_constraintEnd_toEndOf="@+id/btnVot"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/btnVot"
         app:layout_constraintTop_toBottomOf="@+id/btnVot" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

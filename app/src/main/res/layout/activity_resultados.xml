@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
     tools:context=".Resultados">
+
+    <ImageView
+        android:id="@+id/utp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".75"
+        app:srcCompat="@drawable/utp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/txtpor3"
@@ -13,6 +23,7 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/pr3"
         app:layout_constraintTop_toBottomOf="@+id/pr3" />
 
@@ -21,7 +32,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="130dp"
         android:layout_height="30dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgMar2"
         app:layout_constraintStart_toEndOf="@+id/imgMar2"
         app:layout_constraintTop_toTopOf="@+id/imgMar2" />
@@ -31,7 +42,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="130dp"
         android:layout_height="30dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgViv2"
         app:layout_constraintStart_toEndOf="@+id/imgViv2"
         app:layout_constraintTop_toTopOf="@+id/imgViv2" />
@@ -42,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Votos Escrutados"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +63,7 @@
         android:id="@+id/imgOmar2"
         android:layout_width="135dp"
         android:layout_height="121dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTi"
@@ -94,6 +106,7 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/pr1"
         app:layout_constraintTop_toBottomOf="@+id/pr1" />
 
@@ -104,6 +117,7 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/pr2"
         app:layout_constraintTop_toBottomOf="@+id/pr2" />
 

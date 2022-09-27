@@ -60,7 +60,7 @@ public class Resultados extends AppCompatActivity {
 
     public void regresar (View view){
         Intent intent4 = new Intent(getApplicationContext(), MainActivity.class);
-        intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent4);
+        intent4.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivityIfNeeded(intent4, 0);
     }
 }

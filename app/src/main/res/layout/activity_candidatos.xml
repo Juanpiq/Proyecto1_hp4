@@ -4,114 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
     tools:context=".Candidatos">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="156dp"
-        android:layout_height="343dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtU">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/rb1"
+        <ImageView
+            android:id="@+id/utp"
+            android:layout_width="410dp"
+            android:layout_height="727dp"
+            android:alpha=".75"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/utp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="156dp"
+            android:layout_height="343dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtU">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Omar Aizpurua"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Martín Candanedo"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vivian Valenzuela"
+                android:textColor="#FFFFFF"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtEl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Omar Aizpurua" />
+            android:layout_marginTop="25dp"
+            android:text="Elecciones a Rector"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtU"
+            app:layout_constraintStart_toStartOf="@+id/txtU"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"></LinearLayout>
-
-        <RadioButton
-            android:id="@+id/rb2"
+        <TextView
+            android:id="@+id/txtU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Martín Candanedo" />
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Universidad Tecnológica de Panamá"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEl" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"></LinearLayout>
+        <ImageView
+            android:id="@+id/imgOmar"
+            android:layout_width="135dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/txtU"
+            app:srcCompat="@drawable/omar" />
 
-        <RadioButton
-            android:id="@+id/rb3"
+        <ImageView
+            android:id="@+id/imgMar"
+            android:layout_width="135dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/imgOmar"
+            app:srcCompat="@drawable/martin" />
+
+        <ImageView
+            android:id="@+id/imgViv"
+            android:layout_width="135dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/imgMar"
+            app:srcCompat="@drawable/valenzuela" />
+
+        <Button
+            android:id="@+id/btnVotar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vivian Valenzuela"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/txtEl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Elecciones a Rector"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtU"
-        app:layout_constraintStart_toStartOf="@+id/txtU"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Universidad Tecnológica de Panamá"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEl" />
-
-    <ImageView
-        android:id="@+id/imgOmar"
-        android:layout_width="135dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/txtU"
-        app:srcCompat="@drawable/omar" />
-
-    <ImageView
-        android:id="@+id/imgMar"
-        android:layout_width="135dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/imgOmar"
-        app:srcCompat="@drawable/martin" />
-
-    <ImageView
-        android:id="@+id/imgViv"
-        android:layout_width="135dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/imgMar"
-        app:srcCompat="@drawable/valenzuela" />
-
-    <Button
-        android:id="@+id/btnVotar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Votar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgViv"
-        android:onClick="Votar"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="20dp"
+            android:text="Votar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViv"
+            android:onClick="Votar"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
