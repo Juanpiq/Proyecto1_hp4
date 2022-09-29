@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo1"
+    android:background="@drawable/fondo2"
     tools:context=".Resultados">
 
     <ImageView
@@ -23,7 +23,8 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="@+id/pr3"
         app:layout_constraintTop_toBottomOf="@+id/pr3" />
 
@@ -33,6 +34,7 @@
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imgMar2"
         app:layout_constraintStart_toEndOf="@+id/imgMar2"
         app:layout_constraintTop_toTopOf="@+id/imgMar2" />
@@ -43,6 +45,7 @@
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imgViv2"
         app:layout_constraintStart_toEndOf="@+id/imgViv2"
         app:layout_constraintTop_toTopOf="@+id/imgViv2" />
@@ -53,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Votos Escrutados"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +98,7 @@
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imgOmar2"
         app:layout_constraintStart_toEndOf="@+id/imgOmar2"
         app:layout_constraintTop_toTopOf="@+id/imgOmar2" />
@@ -106,7 +110,8 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="@+id/pr1"
         app:layout_constraintTop_toBottomOf="@+id/pr1" />
 
@@ -117,7 +122,8 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="@+id/pr2"
         app:layout_constraintTop_toBottomOf="@+id/pr2" />
 

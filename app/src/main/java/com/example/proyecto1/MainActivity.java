@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
        votantes.add(new Estudiante("8-970-242",0));
        votantes.add(new Estudiante("3-752-1461",0));
        votantes.add(new Estudiante("3-745-950",0));
+       votantes.add(new Estudiante("3-743-1190",0));
        return votantes;
    }
     @Override
