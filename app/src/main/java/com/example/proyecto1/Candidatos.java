@@ -34,8 +34,9 @@ public class Candidatos extends AppCompatActivity {
         RadioButton rb1 = findViewById(R.id.rb1);
         RadioButton rb2 = findViewById(R.id.rb2);
         RadioButton rb3 = findViewById(R.id.rb3);
+        RadioButton rb4 = findViewById(R.id.rb4);
 
-        if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
+        if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
             if(rb1.isChecked()){
                 voto = 1;
 
@@ -43,7 +44,10 @@ public class Candidatos extends AppCompatActivity {
             else if (rb2.isChecked()){
                 voto = 2;
             }
-            else voto = 3;
+            else if (rb3.isChecked()){
+                voto = 3;
+            }
+            else voto = 4;
 
             votante2.get(posicion).voto = voto;
 

@@ -24,8 +24,8 @@
 
         <RadioGroup
             android:id="@+id/radioGroup"
-            android:layout_width="156dp"
-            android:layout_height="343dp"
+            android:layout_width="175dp"
+            android:layout_height="397dp"
             android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -36,9 +36,9 @@
                 android:id="@+id/rb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Omar Aizpurua"
                 android:background="@color/white"
-                android:textColor="#000000"/>
+                android:text="Omar Aizpurua"
+                android:textColor="#000000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,9 +49,9 @@
                 android:id="@+id/rb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Martín Candanedo"
                 android:background="@color/white"
-                android:textColor="#000000"/>
+                android:text="Martín Candanedo"
+                android:textColor="#000000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,10 +62,17 @@
                 android:id="@+id/rb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:text="Vivian Valenzuela"
                 android:textColor="#000000"
-                android:background="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="nulo" />
 
         </RadioGroup>
 

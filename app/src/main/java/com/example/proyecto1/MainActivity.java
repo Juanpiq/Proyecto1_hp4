@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void resultados (View view){
-        int[] votos = {0,0,0,0};
+        int[] votos = {0,0,0,0,0};
         Intent intent3 = new Intent(MainActivity.this,Resultados.class);
         for(int i = 0; i < votantes.size(); i++){
             if (votantes.get(i).voto != 0){
@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (votantes.get(i).voto == 3){
                     votos[3]++;
                 }
+                else votos[4]++;
                 votos[0]++;
             }
         }

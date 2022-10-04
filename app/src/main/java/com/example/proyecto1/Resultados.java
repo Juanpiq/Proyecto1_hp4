@@ -16,6 +16,7 @@ public class Resultados extends AppCompatActivity {
     TextView txtpor1;
     TextView txtpor2;
     TextView txtpor3;
+    TextView txtpor4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +33,13 @@ public class Resultados extends AppCompatActivity {
         txtpor1 = findViewById(R.id.txtpor1);
         txtpor2 = findViewById(R.id.txtpor2);
         txtpor3 = findViewById(R.id.txtpor3);
+        txtpor4 = findViewById(R.id.txtpor4);
 
-        int [] porcen = {0,0,0};
+        int [] porcen = {0,0,0,0};
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 4; i++){
             if(votos[0] == 0){
-                for (int j = 0; j < 3; j++){
+                for (int j = 0; j < 4; j++){
                     porcen[i] = 0;
                 }
                 break;
@@ -53,9 +55,10 @@ public class Resultados extends AppCompatActivity {
         pr3.setMax(100);
         pr3.setProgress(porcen[2]);
 
-        txtpor1.setText(String.valueOf(porcen[0] + "%"));
-        txtpor2.setText(String.valueOf(porcen[1] + "%"));
-        txtpor3.setText(String.valueOf(porcen[2] + "%"));
+        txtpor1.setText(String.valueOf(porcen[0] + "%, " + votos[1] + " votos"));
+        txtpor2.setText(String.valueOf(porcen[1] + "%, " + votos[2] + " votos"));
+        txtpor3.setText(String.valueOf(porcen[2] + "%, " + votos[3] + " votos"));
+        txtpor4.setText(String.valueOf(porcen[3] + "%, " + votos[4] + " votos nulos"));
     }
 
     public void regresar (View view){
